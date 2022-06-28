@@ -6,10 +6,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 import org.hibernate.annotations.TypeDef;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "users",
@@ -39,6 +38,6 @@ public class UserDto
     @NotNull
     @Column(columnDefinition = "jsonb")
     @Type(type = "jsonb")
-    private ArrayList<AddressDto> addressList;
+    private List<AddressDto> addressList;
 }
 
